@@ -1,0 +1,21 @@
+type: environment.insomnia.rest/5.0
+name: s2688-d1
+meta:
+  id: wrk_50acfbc118524630ab769e0ddc7ac7f8
+  created: 1749814726562
+  modified: 1749814726562
+  description: ""
+environments:
+  name: s2688-d1
+  meta:
+    id: env_0794a45ed3f6484a9be236003096720b
+    created: 1749800233501
+    modified: 1749803953652
+    isPrivate: false
+  data:
+    baseUrl: https://d1-s2688-api.hpr.caas.ca-ts.group.gca
+    baseUrlPostes: "{{baseUrl}}/v1.0/ress2"
+    baseUrlDonnees: "{{baseUrl}}/v1.0/ress1"
+    token: eyJraWQiOiJDX2NmYVRnd09uZk1IS3ctT2hrNVRrb1pXX005VVFfQ1FvRkdQQzgxckhVIiwiYWxnIjoiUlMyNTYifQ.ewogICJqdGkiIDogIjBhNDAzZTNhLWNmNTQtNDNkMi04NTg4LTIxMDFlOGI5M2U3MiIsCiAgImlzcyIgOiAic2RqLWRldnR1IiwKICAic3ViIiA6ICIwOTljMjA0Y2FlZDg4NDIxYjA3MGJjZmQwZDJlZGVmNTQzMDMwNzBkNjEzNDU4NjVkY2M1MTM4ZjEyNDM5YTJlIiwKICAiZXhwIiA6IDI3MTIxNTQwMDMsCiAgImF1ZCIgOiBbICJjYS1lc2IiIF0sCiAgImlhdCIgOiAxNzEyMTUzNDYzLAogICJhdXRoX3RpbWUiIDogMTcxMjE1MzQ2MywKICAiYWNyIiA6ICIyMCIsCiAgImFtciIgOiBbICJwd2QiIF0sCiAgIkFTX0kwMDAxX3R5cGUiIDogImNsaWVudF9jcmVkZW50aWFscyIsCiAgInNjb3BlIiA6ICJvcGVuaWQiLAogICJkYXQiIDogewogICAgImF1dGhlbnRpY2F0aW9uX2xldmVsIiA6ICIyIgogIH0sCiAgImF1dGhvcml6YXRpb25fY29udGV4dCIgOiB7CiAgICAiY2xpZW50X2lkIiA6ICIwOTljMjA0Y2FlZDg4NDIxYjA3MGJjZmQwZDJlZGVmNTQzMDMwNzBkNjEzNDU4NjVkY2M1MTM4ZjEyNDM5YTJlIiwKICAgICJzZXNzaW9uX2lkIiA6IG51bGwsCiAgICAidXNlcl9pZCIgOiBudWxsLAogICAgInVzZXJfdHlwZSIgOiBudWxsLAogICAgInVzZXJfdW9tX2NvZGUiIDogbnVsbAogIH0KfQ.qc9aOyVePttVpbdpRtbHLiefAC5mPxoeWgq7wGQHxsvovAHZo0I7AX4wQToXEzsII1J4CkuCuYU0vM_GqmHXrxhq5l03PQYFbZwnVk2zNqKaWUCL_PxoXG-3Bfh6f0u48BsJyjOQcqEWDJhnowVMpdNFievCoyCzPTluW2hf3GDm9KEil_bJ4Bd70dXK0S9qUOO6TaMk_C9AYJ6-p3h-ZwYG0VpvO6LlOE_L0rSj9aazGrBBgaaHC_UUWR8h1H2uBF1VwIur95uxjP-y0DIOgTmC5tcpfYUp7qcD3BMy6PIUP457bJAvh9lViPz1JD4OveX2TJsggy7t2PoCPx-bvQ
+    baseUrlSupervisionPostes: https://d9-s2688-api.hpr.caas.ca-ts.group.gca/d1-s2688-ress2-v1-0
+    baseUrlSupervisionDonnees: https://d9-s2688-api.hpr.caas.ca-ts.group.gca/d1-s2688-ress1-v1-0

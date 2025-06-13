@@ -1,0 +1,105 @@
+type: collection.insomnia.rest/5.0
+name: s2688-ress-donnees-supervision
+meta:
+  id: wrk_fbccc23f32244028b4af33b2e74ea08a
+  created: 1749814726554
+  modified: 1749814726554
+  description: ""
+collection:
+  - name: s2688-ress-donnees-supervision
+    meta:
+      id: fld_43cb0175186b45d6b9f4df3a8b0ab27d
+      created: 1749801620612
+      modified: 1749803992863
+      sortKey: -1749801618810
+      description: ""
+    children:
+      - name: supervision
+        meta:
+          id: fld_fee1f6fc66fe4dedbbee36438f148bdd
+          created: 1749801620613
+          modified: 1749803992863
+          sortKey: -1749801618809
+          description: ""
+        children:
+          - url: "{{baseUrlSupervisionDonnees}}/actuator/healthy"
+            name: heartbeat
+            meta:
+              id: req_d8e8a18b670b478f8d4404db2c9111a6
+              created: 1749801620615
+              modified: 1749801837278
+              isPrivate: false
+              description: ""
+              sortKey: -1749801618808
+            method: GET
+            scripts:
+              preRequest: ""
+              afterResponse: |-
+                insomnia.test("Status code is 200", function () {
+                    insomnia.response.to.have.status(200);
+                });
+                var jsonResp = insomnia.response.json();
+                const output = insomnia.response.text();
+
+
+                insomnia.test("status is UP", function () {
+                    insomnia.expect(jsonResp.status).equals("UP");
+                });
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: "{{baseUrlSupervisionDonnees}}/actuator/prometheus"
+            name: metricbeat
+            meta:
+              id: req_d60f7e7a75c443f797ee7d213c8f6ffd
+              created: 1749801620617
+              modified: 1749801833062
+              isPrivate: false
+              description: ""
+              sortKey: -1749801618807
+            method: GET
+            scripts:
+              preRequest: ""
+              afterResponse: >-
+                insomnia.test("Status code is 200", function () {
+                    insomnia.response.to.have.status(200);
+                });
+
+                const output = insomnia.response.text();
+
+                insomnia.test("Body matches string", function () {
+                    // exemple de metric remonté de base
+                    insomnia.expect(output).to.include("jvm_memory_usage_after_gc_percent");
+                });
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+        scripts:
+          afterResponse: ""
+          preRequest: ""
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_caa782eb107847d69b47baafa005bc1b
+    created: 1749801699657
+    modified: 1749803992858
+environments:
+  name: Base Environment
+  meta:
+    id: env_dfa70e75b2ed4b54a5c63fab505cba13
+    created: 1749801699655
+    modified: 1749803992860
+    isPrivate: false
